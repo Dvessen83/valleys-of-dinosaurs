@@ -1,5 +1,11 @@
 <!-- app/views/dinosaurs/_form.html.erb -->
 
+<ul>
+    <% @dinosaur.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+  </ul>
+
 <%= form_for @dinosaur do |f| %>
 
   <%= f.label :name %>
