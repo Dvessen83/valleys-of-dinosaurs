@@ -1,4 +1,6 @@
 class Dinosaur < ApplicationRecord
+  belongs_to :valley
+
   validates :name, presence: true, uniqueness: true
 
   validates :age, length: {maximum: 5}, allow_blank: false
